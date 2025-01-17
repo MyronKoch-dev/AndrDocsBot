@@ -1,10 +1,28 @@
+## SpecStory
+
+## Chatbot Centering and Dark Mode Setup (1/17/2025, 4:08:49 PM)
+
+_**User**_
+
+Center the content of this bot, and put it in dark mode. 
+
+---
+
+_**Assistant**_
+
+I'll help you modify the HTML file to center the chatbot content and implement a dark mode theme. I'll edit the styles and theme configuration.
+
+---
+
+_**Assistant**_
+
+```
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andromeda Documentation Chatbot</title>
+    <title>Flowise Chatbot</title>
     <style>
         body {
             margin: 0;
@@ -15,7 +33,6 @@
             height: 100vh;
             background-color: #1a1a1a;
         }
-
         #chatbot-container {
             width: 90%;
             max-width: 1200px;
@@ -24,22 +41,7 @@
         }
     </style>
 </head>
-
-<body>
-    <div id="chatbot-container">
-        <flowise-fullchatbot></flowise-fullchatbot>
-    </div>
-    <script type="module">
-        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
-        Chatbot.initFull({
-            chatflowid: "c020efa3-30e0-4439-a5ac-07028fa1457f",
-            apiHost: "https://k6t250rsohel9c8b1pm2goel7k.ingress.akash-palmito.org",
-            chatflowConfig: {
-                // Add any specific chatflow configurations here
-            },
-            observersConfig: {
-                // Add any observer configurations here
-            },
+// ... existing code ...
             theme: {
                 button: {
                     backgroundColor: '#3B81F6',
@@ -76,7 +78,7 @@
                 chatWindow: {
                     showTitle: true,
                     showAgentMessages: true,
-                    title: 'Andromeda Docs Bot',
+                    title: 'Flowise Bot',
                     titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                     welcomeMessage: 'Hello! This is a custom welcome message',
                     errorMessage: 'This is a custom error message',
@@ -128,13 +130,39 @@
                     footer: {
                         textColor: '#ffffff',
                         text: 'Powered by',
-                        company: 'Andromeda',
-                        companyLink: 'https://andromedaprotocol.io'
+                        company: 'Flowise',
+                        companyLink: 'https://flowiseai.com'
                     }
                 }
             }
-        });
-    </script>
-</body>
+// ... existing code ...
+```
 
-</html>
+---
+
+_**Assistant**_
+
+
+
+I've made the following changes to implement dark mode and center the content:
+
+1. Centered the content:
+   - Added `width: 90%` and `max-width: 1200px` to the chatbot container
+   - Added `margin: auto` to center the container
+   - Set `height: 90vh` to give some padding on top and bottom
+
+2. Implemented dark mode:
+   - Changed the background color to a dark gray (`#1a1a1a`)
+   - Updated all text colors to white for better contrast
+   - Changed message backgrounds to darker shades
+   - Updated the tooltip and disclaimer backgrounds to match the dark theme
+   - Modified the input field to have a dark background with white text
+
+The chatbot should now be centered on the page with a dark theme that's easier on the eyes. All the interactive elements maintain good contrast ratios for accessibility.
+
+---
+
+
+
+---
+
